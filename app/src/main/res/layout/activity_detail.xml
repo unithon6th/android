@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kr.unithon.noname.DetailActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:gravity="center"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="28dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Naver Text to Speech!"/>
+
+    <EditText
+        android:id="@+id/et_text"
+        android:hint="텍스트를 입력하세요."
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_below="@+id/et_text"
+        android:gravity="center"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_tts"
+            android:text="미진씨 읽어줘!"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bt_reset"
+            android:text="새로작성"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
