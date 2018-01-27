@@ -1,6 +1,7 @@
 package kr.unithon.noname;
 
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -70,11 +72,70 @@ public class MainActivity extends BaseActivity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.container);
         viewPager.setAdapter(adapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setText("내 베지");
-        tabLayout.getTabAt(1).setText("뉴 매칭");
-        tabLayout.getTabAt(2).setText("내 정보");
+        TextView tab1 = findViewById(R.id.tab_1);
+        TextView tab2 = findViewById(R.id.tab_2);
+        TextView tab3 = findViewById(R.id.tab_3);
+
+        tab1.setTag(1);
+        tab2.setTag(2);
+        tab3.setTag(3);
+
+        View.OnClickListener onClickListener = view -> {
+            tab1.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.pale_grey));
+            tab2.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.pale_grey));
+            tab3.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.pale_grey));
+            switch ((int)view.getTag()){
+                case 1:
+                    tab1.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.aqua_marine));
+                    viewPager.setCurrentItem(0);
+                    break;
+                case 2:
+                    tab2.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.aqua_marine));
+                    viewPager.setCurrentItem(1);
+                    break;
+                case 3:
+                    tab3.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.aqua_marine));
+                    viewPager.setCurrentItem(2);
+                    break;
+            }
+
+        };
+
+        tab1.setOnClickListener(onClickListener);
+        tab2.setOnClickListener(onClickListener);
+        tab3.setOnClickListener(onClickListener);
+
+        viewPager.addOnPageChangeListener(
+                new ViewPager.OnPageChangeListener() {
+                    @Override
+                    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                    }
+
+                    @Override
+                    public void onPageSelected(int position) {
+                        tab1.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.pale_grey));
+                        tab2.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.pale_grey));
+                        tab3.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.pale_grey));
+                        switch (position){
+                            case 0:
+                                tab1.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.aqua_marine));
+                                break;
+                            case 1:
+                                tab2.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.aqua_marine));
+                                break;
+                            case 2:
+                                tab3.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.aqua_marine));
+                                break;
+
+                        }
+                    }
+
+                    @Override
+                    public void onPageScrollStateChanged(int state) {
+
+                    }
+                }
+        );
     }
 }
 

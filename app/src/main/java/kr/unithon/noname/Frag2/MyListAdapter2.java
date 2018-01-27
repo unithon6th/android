@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import org.w3c.dom.DOMLocator;
 import org.w3c.dom.Text;
@@ -70,11 +71,19 @@ public class MyListAdapter2 extends RecyclerView.Adapter<MyListAdapter2.ViewHold
         holder.sort.setText(mItems.get(position).getSort());
         holder.title.setText(mItems.get(position).getTitle());
         holder.content.setText(mItems.get(position).getContent());
-        holder.price.setText(String.valueOf(mItems.get(position).getPrice()));
+        holder.price.setText(
+                String.format(
+                        "1개당 ₩%,d원",
+                        mItems.get(position).getPrice()
+                )
+        );
         String url = mItems.get(position).getImg();
         Log.i(MyListAdapter2.class.getSimpleName(), "url : " + url);
         Glide.with(context)
                 .load(url)
+                .apply(
+                        new RequestOptions().centerCrop()
+                )
                 .into(holder.img);
     }
 
