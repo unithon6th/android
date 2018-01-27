@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content">
 
 
         <LinearLayout
@@ -129,14 +129,14 @@
                     android:textSize="24sp" />
 
                 <HorizontalScrollView
-                    android:id="@+id/favoriteCrops2"
+                    android:id="@+id/favoriteFarmers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp">
 
                     <LinearLayout
-                        android:id="@+id/Crop2"
+                        android:id="@+id/Crop1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:paddingRight="10dp">
@@ -150,7 +150,7 @@
                             android:paddingRight="10dp">
 
                             <ImageButton
-                                android:id="@+id/farmerIcon2"
+                                android:id="@+id/imgbtn_farmer1"
                                 android:layout_width="70dp"
                                 android:layout_height="70dp"
                                 android:layout_weight="1"
@@ -162,12 +162,12 @@
                                 />
 
                             <TextView
-                                android:id="@+id/farmerName2"
+                                android:id="@+id/name_farmer1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="꼬구마"
+                                android:text="당근러"
 
                                 />
                         </LinearLayout>
@@ -181,7 +181,7 @@
                             android:paddingRight="10dp">
 
                             <ImageButton
-                                android:id="@+id/farmerIcon3"
+                                android:id="@+id/imgbtn_farmer2"
                                 android:layout_width="70dp"
                                 android:layout_height="70dp"
                                 android:layout_weight="1"
@@ -193,105 +193,12 @@
                                 />
 
                             <TextView
-                                android:id="@+id/farmerName3"
+                                android:id="@+id/name_farmer2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="당근농장"
-
-                                />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp">
-
-                            <ImageButton
-                                android:id="@+id/farmerIcon4"
-                                android:layout_width="70dp"
-                                android:layout_height="70dp"
-                                android:layout_weight="1"
-                                android:background="@android:color/transparent"
-                                android:padding="0sp"
-                                android:scaleType="centerCrop"
-                                app:srcCompat="@drawable/farmer"
-
-                                />
-
-                            <TextView
-                                android:id="@+id/farmerName4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="배추사랑"
-
-                                />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp">
-
-                            <ImageButton
-                                android:id="@+id/farmerIcon5"
-                                android:layout_width="70dp"
-                                android:layout_height="70dp"
-                                android:layout_weight="1"
-                                android:background="@android:color/transparent"
-                                android:padding="0sp"
-                                android:scaleType="centerCrop"
-                                app:srcCompat="@drawable/farmer"
-
-                                />
-
-                            <TextView
-                                android:id="@+id/farmerName5"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="당근z1존"
-
-                                />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp">
-
-                            <ImageButton
-                                android:id="@+id/farmerIcon"
-                                android:layout_width="70dp"
-                                android:layout_height="70dp"
-                                android:layout_weight="1"
-                                android:background="@android:color/transparent"
-                                android:padding="0sp"
-                                android:scaleType="centerCrop"
-                                app:srcCompat="@drawable/farmer"
-
-                                />
-
-                            <TextView
-                                android:id="@+id/farmerName"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="고구마사랑"
+                                android:text="배추러"
 
                                 />
                         </LinearLayout>
@@ -318,14 +225,14 @@
                     android:textSize="24sp" />
 
                 <HorizontalScrollView
-                    android:id="@+id/favoriteCrops3"
+                    android:id="@+id/favoriteCrops"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp">
 
                     <LinearLayout
-                        android:id="@+id/Crop3_1"
+                        android:id="@+id/Crop1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:paddingRight="10dp">
@@ -339,7 +246,7 @@
                             android:paddingRight="10dp">
 
                             <ImageButton
-                                android:id="@+id/imgbtn_crop435"
+                                android:id="@+id/imgbtn_bestcrop1"
                                 android:layout_width="70dp"
                                 android:layout_height="70dp"
                                 android:layout_weight="1"
@@ -351,7 +258,7 @@
                                 />
 
                             <TextView
-                                android:id="@+id/name_crop35"
+                                android:id="@+id/name_bestcrop1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -370,7 +277,7 @@
                             android:paddingRight="10dp">
 
                             <ImageButton
-                                android:id="@+id/imgbtn_crop"
+                                android:id="@+id/imgbtn_bestcrop2"
                                 android:layout_width="70dp"
                                 android:layout_height="70dp"
                                 android:layout_weight="1"
@@ -382,7 +289,7 @@
                                 />
 
                             <TextView
-                                android:id="@+id/name_crop"
+                                android:id="@+id/name_bestcrop2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -398,23 +305,19 @@
                 </HorizontalScrollView>
             </LinearLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
+            <Button
+                android:id="@+id/closeBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"></LinearLayout>
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="close"
+
+                />
 
         </LinearLayout>
-        <Button
-            android:id="@+id/closeBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="close"/>
+
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

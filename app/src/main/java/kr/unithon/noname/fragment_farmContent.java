@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -19,7 +20,11 @@ public class fragment_farmContent extends Fragment {
     ArrayAdapter<String> adapter;
     TextView textView;
 
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.listview_farm_item, container, false);
 
+        return rootView;
+    }
 
 
 
