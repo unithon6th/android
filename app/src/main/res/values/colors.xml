@@ -10,5 +10,8 @@
     <color name="aqua_marine">#50e3c2</color>
     <color name="warm_grey">#979797</color>
 
+    <color name="White">#FFF</color>
+    <color name="DarkGrey">#566573</color>
+    <color name="Green">#58D68D</color>
 </resources>
 
