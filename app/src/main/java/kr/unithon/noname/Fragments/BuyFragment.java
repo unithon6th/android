@@ -16,6 +16,10 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import kr.unithon.noname.ListAdapter_farm;
+import kr.unithon.noname.R;
+import kr.unithon.noname.list_farmItem;
+
 /**
  * Created by user on 2018-01-27.
  */
@@ -45,9 +49,9 @@ public class BuyFragment extends Fragment {
 
     public void FarmMenu(View view) {
 
-       listView = view.findViewById(R.id.farmgridlist);
+        listView = view.findViewById(R.id.farmgridlist);
         list_itemArrayList = new ArrayList<list_farmItem>();
-          list_itemArrayList.add(
+        list_itemArrayList.add(
                 new list_farmItem("http://cfile27.uf.tistory.com/image/2052E343504D53C106B2DC", "배추", 50000, "쁘띠 농장 직거래 배추", "채소"));
         list_itemArrayList.add(
                 new list_farmItem("http://cfile27.uf.tistory.com/image/2052E343504D53C106B2DC", "당근", 3000, "당근농장 당근 2년차 ", "채소"));
