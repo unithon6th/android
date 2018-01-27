@@ -34,7 +34,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="96dp"
+                android:layout_marginTop="68dp"
+                android:text="1월 28일(토)"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:lineSpacingExtra="10dp"
                 android:text="오늘은 비를\n맞았어요."
                 android:textColor="#ffffff"
