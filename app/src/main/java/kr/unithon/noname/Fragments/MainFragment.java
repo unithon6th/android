@@ -1,4 +1,4 @@
-package kr.unithon.noname;
+package kr.unithon.noname.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import kr.unithon.noname.R;
+
 /**
  * Created by user on 2018-01-27.
  */
@@ -14,9 +16,15 @@ import android.view.ViewGroup;
 public class MainFragment extends Fragment {
     private static final String TAG = "MainFragment";
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        return rootView;
     }
 }
