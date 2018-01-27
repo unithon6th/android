@@ -32,7 +32,14 @@ public class MainFragment extends Fragment {
 
         result = new ArrayList<>();
         for(int i=0; i<10; i++){
-            result.add(new Product("http://tong.visitkorea.or.kr/cms/resource/74/2018174_image2_1.JPG","1","1","1"));
+            result.add(
+                    new Product(
+                            "http://www.farmtail.com/shopimages/farmtail/005019000006.jpg?1450922764",
+                            "재배 까지 D-72",
+                            "셀팜농장",
+                            "내 배추 다섯포기"
+                    )
+            );
         }
     }
 

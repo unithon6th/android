@@ -1,35 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <ImageView
+    android:layout_height="match_parent">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="360dp"
-        android:id="@+id/img"/>
-    <TextView
-        android:layout_width="84dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="25dp"
-        android:textSize="10dp"
-        android:layout_marginBottom="12dp"
-        android:id="@+id/Dday"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:textSize="20dp"
-        android:id="@+id/title"
-        android:layout_marginLeft="25dp"
-        android:layout_marginBottom="12dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:textSize="20dp"
-        android:layout_marginLeft="25dp"
-        android:id="@+id/content"/>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="360dp">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="360dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradation_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="20dp"
+                android:text="자세히 보기"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/Dday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/aqua_marine"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="재배 까지 D-72"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="25dp"
+            android:text="셀팜농장"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            app:fontPath="@string/font_bold" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="25dp"
+            android:text="내 배추 다섯포기"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            app:fontPath="@string/font_bold" />
+    </LinearLayout>
 </RelativeLayout>

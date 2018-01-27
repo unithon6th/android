@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -19,6 +21,7 @@ import org.json.JSONObject;
 import kr.unithon.noname.DetailActivity;
 import kr.unithon.noname.MainActivity;
 import kr.unithon.noname.R;
+import kr.unithon.noname.ui.base.BaseActivity;
 
 import static com.nhn.android.naverlogin.OAuthLogin.mOAuthLoginHandler;
 
@@ -26,7 +29,7 @@ import static com.nhn.android.naverlogin.OAuthLogin.mOAuthLoginHandler;
  * Created by HANSUNG on 2018-01-27.
  */
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity {
     OAuthLogin mOAuthLoginModule;
     OAuthLoginButton authLoginButton;
     Context mContext;
@@ -37,25 +40,24 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
 
-        authLoginButton = (OAuthLoginButton) findViewById(R.id.btn_login);
+//        getSupportActionBar().hide();
+
+        authLoginButton = findViewById(R.id.btn_login);
         mOAuthLoginModule = OAuthLogin.getInstance();
         mOAuthLoginModule.init(
                 LoginActivity.this
                 , OAUTH_CLIENT_ID
                 , OAUTH_CLIENT_SECRET
                 , OAUTH_CLIENT_NAME
-                //,OAUTH_CALLBACK_INTENT
-                // SDK 4.1.4 버전부터는 OAUTH_CALLBACK_INTENT변수를 사용하지 않습니다.
 
         );
-        authLoginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                OAuthLogin.getInstance().startOauthLoginActivity(LoginActivity.this, mOAuthLoginHandler);
-                startActivity(new Intent(LoginActivity.this,DetailActivity.class));
-            }
+        authLoginButton.setOnClickListener(v -> {
+            OAuthLogin.getInstance().startOauthLoginActivity(LoginActivity.this, mOAuthLoginHandler);
+            startActivity(new Intent(LoginActivity.this,MainActivity.class));
         });
         if (mOAuthLoginModule.getAccessToken(this) != null) {
             startActivity(new Intent(this,MainActivity.class));
