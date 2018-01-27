@@ -13,5 +13,7 @@
     <color name="White">#FFF</color>
     <color name="DarkGrey">#566573</color>
     <color name="Green">#58D68D</color>
+    <color name="squash">#f6a623</color>
+    <color name="pale_grey">#deddde</color>
 </resources>
 

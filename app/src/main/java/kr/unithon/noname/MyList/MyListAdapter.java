@@ -1,6 +1,7 @@
 package kr.unithon.noname.MyList;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.bumptech.glide.request.RequestOptions;
 import java.util.ArrayList;
 
 import kr.unithon.noname.R;
+import kr.unithon.noname.ui.crop.detail.CropDetailActivity;
 
 /**
  * Created by HANSUNG on 2018-01-28.
@@ -55,6 +57,12 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.product, parent, false);
         ViewHolder holder = new ViewHolder(v);
+        v.setOnClickListener(
+                __ -> {
+                    Intent intent = new Intent(v.getContext(), CropDetailActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+        );
         return holder;
 
     }
