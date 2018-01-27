@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import kr.unithon.noname.MyList.MyListAdapter;
 import kr.unithon.noname.MyList.Product;
 import kr.unithon.noname.R;
+import kr.unithon.noname.api.Api;
+import kr.unithon.noname.api.NetworkRequest;
 
 /**
  * Created by user on 2018-01-27.
@@ -57,9 +59,10 @@ public class BuyFragment extends Fragment {
         mRecyclerview.setHasFixedSize(true);
         mGridLayoutManager = new GridLayoutManager(mcontext, 2);
         mRecyclerview.setLayoutManager(mGridLayoutManager);
-
         myListAdapter2 = new MyListAdapter2(result2, mcontext);
         mRecyclerview.setAdapter(myListAdapter2);
+
+
         return rootView;
     }
 }

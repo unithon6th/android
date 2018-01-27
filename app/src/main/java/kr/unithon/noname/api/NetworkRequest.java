@@ -1,5 +1,7 @@
 package kr.unithon.noname.api;
 
+import android.util.Log;
+
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Single;
@@ -16,7 +18,13 @@ public class NetworkRequest {
         return request.delay(DUMMY_DELAY_MILLISECONDS, TimeUnit.MILLISECONDS)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(consumer);
+                .subscribe(
+                        consumer,
+                        throwable -> {
+                            Log.e(NetworkRequest.class.getSimpleName(), throwable.getMessage());
+                            throwable.printStackTrace();
+                        }
+                );
     }
 
 }
