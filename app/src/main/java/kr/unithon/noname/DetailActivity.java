@@ -44,6 +44,9 @@ public class DetailActivity extends AppCompatActivity{
         btTTS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //int random = (int)(Math.random()*3);
+
                 //사용자가 입력한 텍스트를 이 배열변수에 담는다.
                 String mText;
                 if (etText.getText().length() > 0) { //한글자 이상 1
