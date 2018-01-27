@@ -18,22 +18,24 @@ import kr.unithon.noname.Login.LoginActivity;
  */
 
 public class SplashActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
+
         getSupportActionBar().hide();
-        ImageView img = (ImageView) findViewById(R.id.gif_image);
-        img.setImageResource(R.drawable.vege_01);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent i = new Intent(SplashActivity.this, LoginActivity.class);
-                startActivity(i);
-                finish();
-            }
+
+        ImageView img = findViewById(R.id.gif_image);
+        img.setImageResource(R.drawable.login_bg);
+
+        new Handler().postDelayed(() -> {
+            Intent i = new Intent(SplashActivity.this, LoginActivity.class);
+            startActivity(i);
+            finish();
         }, 3000);
     }
+
 }

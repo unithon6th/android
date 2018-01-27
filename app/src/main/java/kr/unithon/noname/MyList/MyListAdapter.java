@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.airbnb.lottie.animation.content.Content;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 
@@ -29,13 +30,13 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     }
 
     //ViewHolder는 사용자 정의 클레스다. 상속된 클레스로 하면 안된다. 내가 직접 만들어야 함.
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView img;
         public TextView Dday;
         public TextView title;
         public TextView content;
 
-        public ViewHolder(View v){
+        public ViewHolder(View v) {
             super(v);
             img = (ImageView) v.findViewById(R.id.img);
             Dday = (TextView) v.findViewById(R.id.Dday);
@@ -52,7 +53,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     //보여줄 Layout을 생성함.
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.product,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.product, parent, false);
         ViewHolder holder = new ViewHolder(v);
         return holder;
 
@@ -61,17 +62,15 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     //View에 보여줄 데이터를 묶어줌
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        try{
-            holder.Dday.setText(mItems.get(position).getDday());
-            holder.title.setText(mItems.get(position).getTitle());
-            holder.content.setText(mItems.get(position).getContent());
-            String url = mItems.get(position).getImageUrl();
-            Glide.with(context)
-                    .load(url)
-                    .into(holder.img);
-        }catch (Exception e){
-        }
+        holder.Dday.setText(mItems.get(position).getDday());
+        holder.title.setText(mItems.get(position).getTitle());
+        holder.content.setText(mItems.get(position).getContent());
+        String url = mItems.get(position).getImageUrl();
 
+        Glide.with(context)
+                .load(url)
+                .apply(new RequestOptions().centerCrop())
+                .into(holder.img);
     }
 
     //item 갯수

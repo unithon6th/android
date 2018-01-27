@@ -2,6 +2,7 @@ package kr.unithon.noname.Frag2;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import org.w3c.dom.DOMLocator;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -31,14 +33,14 @@ public class MyListAdapter2 extends RecyclerView.Adapter<MyListAdapter2.ViewHold
     }
 
     //ViewHolder는 사용자 정의 클레스다. 상속된 클레스로 하면 안된다. 내가 직접 만들어야 함.
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView img;
         public TextView sort;
         public TextView title;
         public TextView content;
         public TextView price;
 
-        public ViewHolder(View v){
+        public ViewHolder(View v) {
             super(v);
             img = (ImageView) v.findViewById(R.id.img);
             sort = (TextView) v.findViewById(R.id.sort);
@@ -56,7 +58,7 @@ public class MyListAdapter2 extends RecyclerView.Adapter<MyListAdapter2.ViewHold
     //보여줄 Layout을 생성함.
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.product2,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.product2, parent, false);
         ViewHolder holder = new ViewHolder(v);
         return holder;
 
@@ -65,17 +67,15 @@ public class MyListAdapter2 extends RecyclerView.Adapter<MyListAdapter2.ViewHold
     //View에 보여줄 데이터를 묶어줌
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        try{
-            holder.sort.setText(mItems.get(position).getSort());
-            holder.title.setText(mItems.get(position).getTitle());
-            holder.content.setText(mItems.get(position).getContent());
-            holder.price.setText(mItems.get(position).getPrice());
-            String url = mItems.get(position).getImg();
-            Glide.with(context)
-                    .load(url)
-                    .into(holder.img);
-        }catch (Exception e){
-        }
+        holder.sort.setText(mItems.get(position).getSort());
+        holder.title.setText(mItems.get(position).getTitle());
+        holder.content.setText(mItems.get(position).getContent());
+        holder.price.setText(String.valueOf(mItems.get(position).getPrice()));
+        String url = mItems.get(position).getImg();
+        Log.i(MyListAdapter2.class.getSimpleName(), "url : " + url);
+        Glide.with(context)
+                .load(url)
+                .into(holder.img);
     }
 
     //item 갯수

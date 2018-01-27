@@ -14,11 +14,13 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import kr.unithon.noname.Fragments.BuyFragment;
+import kr.unithon.noname.Frag2.BuyFragment;
 import kr.unithon.noname.Fragments.ProfileFragment;
+import kr.unithon.noname.MyList.MainFragment;
+import kr.unithon.noname.ui.base.BaseActivity;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     ListView listView;
     GridView gridView;
     ListAdapter_farm myListAdapter;
@@ -28,20 +30,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btn= (Button) findViewById(R.id.btn);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i= new Intent(MainActivity.this, MainActivity.class);
-                startActivity(i);
-            }
-        });
+
         setupViewPager();
         ShowDialog();
 
 
     }
-    public  void ShowDialog() // 인기작물 팝업 생성 // jiseon
+
+    public void ShowDialog() // 인기작물 팝업 생성 // jiseon
     {
         LayoutInflater dialog = LayoutInflater.from(this);
         final View dialogLayout = dialog.inflate(R.layout.favorite_popuptemp, null);
@@ -50,13 +46,11 @@ public class MainActivity extends AppCompatActivity {
         myDialog.setContentView(dialogLayout);
         myDialog.show();
 
-        Button btn_cancel = (Button)dialogLayout.findViewById(R.id.closeBtn);
+        Button btn_cancel = (Button) dialogLayout.findViewById(R.id.closeBtn);
 
-        btn_cancel.setOnClickListener(new View.OnClickListener()
-        {
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 myDialog.cancel();
             }
         });
@@ -68,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 탭들....
      */
-    private void setupViewPager(){
+    private void setupViewPager() {
         SectionPagerAdapter adapter = new SectionPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new MainFragment());
         adapter.addFragment(new BuyFragment());
