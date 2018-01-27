@@ -1,6 +1,7 @@
 package kr.unithon.noname;
 
 import android.app.Dialog;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class MainActivity extends AppCompatActivity {
     ListView listView;
     GridView gridView;
@@ -26,22 +28,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.listview_farm_item); // 첫페이지 임시로
-        ShowDialog();
+        setContentView(R.layout.activity_main);
+        setupViewPager();
 
-    }
 
-    public void FarmMenu()
-    {
-        gridView= (GridView)findViewById(R.id.farmgridlist);
-        list_itemArrayList = new ArrayList<list_farmItem>();
-        list_itemArrayList.add(
-                new list_farmItem(1,"배추",50000,"쁘띠 농장 직거래 배추","채소"));
-        list_itemArrayList.add(
-                new list_farmItem(2,"당근",3000,"당근농장 당근 2년차 ","채소"));
-
-        myListAdapter = new ListAdapter_farm(MainActivity.this,list_itemArrayList);
-        listView.setAdapter(myListAdapter);
 
     }
     public  void ShowDialog() // 인기작물 팝업 생성 // jiseon
@@ -68,6 +58,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * 탭들....
+     */
+    private void setupViewPager(){
+        SectionPagerAdapter adapter = new SectionPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new MainFragment());
+        adapter.addFragment(new BuyFragment());
+        adapter.addFragment(new ProfileFragment());
+        ViewPager viewPager = (ViewPager) findViewById(R.id.container);
+        viewPager.setAdapter(adapter);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setText("내 베지");
+        tabLayout.getTabAt(1).setText("새 매치");
+        tabLayout.getTabAt(2).setText("내 정보");
+    }
 }
 
 
