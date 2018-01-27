@@ -6,10 +6,7 @@
     android:layout_height="match_parent"
     tools:context="kr.unithon.noname.MainActivity"
     android:orientation="vertical">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+  
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,10 +18,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/relLayout1">
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn"
+        android:text="tts"/>
             <include layout="@layout/layout_center_viewpager" />
-
-        </RelativeLayout>
 
     </RelativeLayout>
 </RelativeLayout>

@@ -32,6 +32,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
     //rxjava
@@ -49,8 +50,10 @@ dependencies {
     compile 'uk.co.chrisjenx:calligraphy:2.3.0'
 
     testImplementation 'junit:junit:4.12'
+    compile 'gun0912.ted:tedpermission:2.1.0'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile files('libs/naveridlogin_android_sdk_4.2.0.aar')
     compile 'de.hdodenhof:circleimageview:2.2.0'
     compile 'com.android.support:design:26.1.0'
 }
