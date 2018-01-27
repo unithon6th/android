@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">noname</string>
+    <string name="seller1">꿀고구마농장</string>
+    <string name="seller1comment">꿀고구마 보장드립니다. </string>
+    <string name="seller2">햇살배추농장</string>
+    <string name="seller2comment">아삭아삭 배추 보장드립니다. </string>
+
 </resources>

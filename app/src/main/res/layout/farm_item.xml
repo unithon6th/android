@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 농장 리스트 1개 받아올 정보  -->
+
+    <LinearLayout
+        android:id="@+id/farmItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ItemImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/cabbage" />
+
+            <TextView
+                android:id="@+id/Item_cropname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="배추 " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Item_farmName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="농장이름"
+                android:textColor="#959595"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/ItemComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="안녕하세요 고구마 농장입니다. 꿀고구마 햇고구마 안녕하세요 고구마 농장입니다. 꿀고구마 햇고구마 꿀고구마 햇고구마 꿀고구마 햇고구마  "
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
