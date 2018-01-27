@@ -8,22 +8,13 @@ import android.widget.Button;
 import android.app.Dialog;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
+
 import kr.unithon.noname.Fragments.BuyFragment;
-import kr.unithon.noname.Fragments.MainFragment;
 import kr.unithon.noname.Fragments.ProfileFragment;
 
 
@@ -41,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(MainActivity.this, DetailActivity.class);
+                Intent i= new Intent(MainActivity.this, MainActivity.class);
                 startActivity(i);
             }
         });
