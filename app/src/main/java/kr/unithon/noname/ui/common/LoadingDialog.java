@@ -43,8 +43,8 @@ public class LoadingDialog extends Dialog {
     private void initLoadingView(){
         LottieAnimationView lottieView = findViewById(R.id.lottie);
 
-        lottieView.loop(true);
         lottieView.setAnimation("loading_animation.json");
+        lottieView.loop(true);
         lottieView.playAnimation();
     }
 }

@@ -22,8 +22,6 @@ public class CropDetailActivity extends BaseActivity {
 
     private void init() {
         requestCropDetail(null);
-
-        new LoadingDialog(CropDetailActivity.this).show();
     }
 
     private void requestCropDetail(String cropId) {
