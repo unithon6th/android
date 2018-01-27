@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:hint="더 많은 작물을 만나보세요."/>
 
-        <GridView
+        <ListView
             android:id="@+id/farmgridlist"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
