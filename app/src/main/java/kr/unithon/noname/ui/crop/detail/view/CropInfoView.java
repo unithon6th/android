@@ -1,5 +1,6 @@
 package kr.unithon.noname.ui.crop.detail.view;
 
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -36,5 +37,21 @@ public class CropInfoView extends BaseCustomView<ViewCropInfoBinding> {
                 .load(R.drawable.background_detail)
                 .apply(RequestOptions.centerCropTransform())
                 .into(binding.background);
+
+        startAnimation();
+    }
+
+    private void startAnimation(){
+        ValueAnimator animator = ValueAnimator.ofFloat(
+                0f,
+                1f
+        );
+        animator.setDuration(800);
+        animator.setStartDelay(3000);
+        animator.addUpdateListener(valueAnimator -> {
+            float value = (float) valueAnimator.getAnimatedValue();
+            binding.dateContainer.setAlpha(value);
+        });
+        animator.start();
     }
 }

@@ -27,12 +27,12 @@
 
             <FrameLayout
                 android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/aqua_marine">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_location" />
 
             </FrameLayout>
 
@@ -56,12 +56,12 @@
 
             <FrameLayout
                 android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/aqua_marine">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_birth" />
 
             </FrameLayout>
 
@@ -85,12 +85,12 @@
 
             <FrameLayout
                 android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/aqua_marine">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_partner" />
 
             </FrameLayout>
 
