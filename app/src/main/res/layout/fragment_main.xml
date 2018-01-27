@@ -1,110 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relativeLayout">
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/colorGrey">
+        android:layout_height="400dp"
+        android:background="@drawable/cabbage"
+        android:id="@+id/cabbage"
+        android:adjustViewBounds="true"/>
 
-        <RelativeLayout
+    <ImageView
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_heart"
+        android:text="btn1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cabbage"
+        android:layout_alignEnd="@+id/button1"
+        android:background="#00000000"
+        android:text="자세히 보기"
+        android:textColor="@color/White"
+        android:textSize="20sp" />
+
+</RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dday"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/Green"
+        android:text="재배까지 D-72"
+        android:textSize="15sp"
+        android:textColor="@color/White" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/dday"
+        android:layout_below="@+id/dday"
+        android:text="셀팜농장"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dday"
+        android:layout_below="@+id/textView1"
+        android:text="내 배추 다섯포기"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout2"
+        android:layout_below="@id/textView2">
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="400dp"
+            android:background="@drawable/tangerine"
+            android:id="@+id/tangerine"
+            android:adjustViewBounds="true"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:orientation="vertical"
-                android:background="@drawable/veges">
-
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/profilepic"
-                    />
-
-                <Button
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="350dp"
-                    android:background="@drawable/ic_edit"
-                    android:id="@+id/edit_profile"/>
-
-            </LinearLayout>
-        </RelativeLayout>
-        <TextView
-            android:layout_gravity="center"
+        <ImageView
+            android:id="@+id/button2-1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Unithon 6th"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp" />
-        <LinearLayout
-            android:layout_width="360dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/ic_heart"
+            android:text="btn1" />
+
+        <Button
+            android:id="@+id/button2-2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:layout_marginTop="45dp">
+            android:layout_alignBottom="@+id/tangerine"
+            android:layout_alignEnd="@+id/button2-1"
+            android:background="#00000000"
+            android:text="자세히 보기"
+            android:textColor="@color/White"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dday2"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/Green"
+        android:text="재배까지 D-58"
+        android:textSize="15sp"
+        android:textColor="@color/White" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/dday2"
+        android:layout_below="@+id/dday2"
+        android:text="셀팜농장"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dday2"
+        android:layout_below="@+id/textView3"
+        android:text="내 귤 50개"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    </RelativeLayout>
 
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:paddingLeft="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_email"/>
-                <TextView
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
-                    android:text="sellfarm@gmail.com"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="25dp"
-                android:orientation="horizontal"
-                android:paddingLeft="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_phone"/>
-                <TextView
-                    android:textStyle="bold"
-
-                    android:layout_gravity="center_vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
-                    android:text="+82 010 1234 5678"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="25dp"
-                android:orientation="horizontal"
-                android:paddingLeft="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_address"/>
-                <TextView
-                    android:textStyle="bold"
-
-                    android:layout_gravity="center_vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
-                    android:text="용인시 수지구 넥터로 유니톤아파트 101동 101호"/>
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+</ScrollView>

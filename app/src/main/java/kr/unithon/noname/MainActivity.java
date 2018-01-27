@@ -22,6 +22,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import kr.unithon.noname.Fragments.BuyFragment;
+import kr.unithon.noname.Fragments.MainFragment;
+import kr.unithon.noname.Fragments.ProfileFragment;
+
 
 public class MainActivity extends AppCompatActivity {
     ListView listView;
@@ -84,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.getTabAt(0).setText("내 베지");
-        tabLayout.getTabAt(1).setText("새 매치");
+        tabLayout.getTabAt(1).setText("뉴 매칭");
         tabLayout.getTabAt(2).setText("내 정보");
     }
 }

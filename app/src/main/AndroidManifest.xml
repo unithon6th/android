@@ -24,9 +24,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"></activity>
+
+        <!-- Crop Detail Activity -->
+        <activity android:name=".ui.crop.detail.CropDetailActivity">
 
         </activity>
+
         <activity android:name=".DetailActivity" />
         <activity
             android:name=".Login.LoginActivity"
@@ -34,11 +38,6 @@
         <activity
             android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
             android:label="OAuth2.0 In-app" />
-
-        <!-- Crop Detail Activity -->
-        <activity android:name=".ui.crop.detail.CropDetailActivity">
-
-        </activity>
 
 
     </application>

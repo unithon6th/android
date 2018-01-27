@@ -1,4 +1,4 @@
-package kr.unithon.noname;
+package kr.unithon.noname.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import kr.unithon.noname.R;
 
 /**
  * Created by user on 2018-01-27.

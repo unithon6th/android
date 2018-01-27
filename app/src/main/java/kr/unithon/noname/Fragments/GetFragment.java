@@ -1,4 +1,4 @@
-package kr.unithon.noname;
+package kr.unithon.noname.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -16,12 +16,16 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import kr.unithon.noname.ListAdapter_crop;
+import kr.unithon.noname.R;
+import kr.unithon.noname.SearchAdapter;
+import kr.unithon.noname.list_cropItem;
+
 /**
  * Created by user on 2018-01-27.
  */
 
-public class MainFragment extends Fragment {
-    private static final String TAG = "MainFragment";
+public class GetFragment extends Fragment {
 
 
     private Context mContext;
