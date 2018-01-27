@@ -1,4 +1,4 @@
-package kr.unithon.noname;
+package kr.unithon.noname.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import kr.unithon.noname.R;
 
 /**
  * Created by user on 2018-01-27.
@@ -27,7 +29,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+       View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
        EditProfile= (Button)rootView.findViewById(R.id.edit_profile);
        EditProfile.setOnClickListener(this);
         return rootView;
