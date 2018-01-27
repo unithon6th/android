@@ -27,7 +27,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+       View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
        EditProfile= (Button)rootView.findViewById(R.id.edit_profile);
        EditProfile.setOnClickListener(this);
         return rootView;

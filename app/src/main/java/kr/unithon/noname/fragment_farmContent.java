@@ -34,7 +34,7 @@ public class fragment_farmContent extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
         FarmContent= (Button)rootView.findViewById(R.id.FarmContent);
         FarmContent.setOnClickListener(this);
         return rootView;
