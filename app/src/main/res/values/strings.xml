@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name"></string>
+    <string-array name="Select_Veges">
+        <item>배추</item>
+        <item>토마토</item>
+        <item>감귤</item>
+        <item>당근</item>
+        <item>케일</item>
+    </string-array>
+    <string-array name="optionsforveges">
+        <item>유기농</item>
+        <item>농약파티</item>
+    </string-array>
 </resources>
