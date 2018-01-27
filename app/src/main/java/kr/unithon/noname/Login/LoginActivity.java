@@ -54,8 +54,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 OAuthLogin.getInstance().startOauthLoginActivity(LoginActivity.this, mOAuthLoginHandler);
-                startActivity(new Intent(LoginActivity.this,MainActivity.class));
-                finish();
+                startActivity(new Intent(LoginActivity.this,DetailActivity.class));
             }
         });
         if (mOAuthLoginModule.getAccessToken(this) != null) {

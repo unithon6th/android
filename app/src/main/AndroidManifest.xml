@@ -14,16 +14,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-        <activity android:name=".MainActivity"></activity>
-
-        <!-- Crop Detail Activity -->
-        <activity android:name=".ui.crop.detail.CropDetailActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Crop Detail Activity -->
+        <activity android:name=".ui.crop.detail.CropDetailActivity"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".DetailActivity"/>
         <activity android:name=".Login.LoginActivity"

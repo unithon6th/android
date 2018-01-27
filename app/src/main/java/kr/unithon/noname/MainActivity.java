@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+
+import kr.unithon.noname.MyList.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(MainActivity.this, DetailActivity.class);
+                Intent i= new Intent(MainActivity.this, MainActivity.class);
                 startActivity(i);
             }
         });
