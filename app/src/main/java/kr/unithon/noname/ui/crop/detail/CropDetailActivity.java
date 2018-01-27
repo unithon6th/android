@@ -8,6 +8,7 @@ import kr.unithon.noname.R;
 import kr.unithon.noname.api.Api;
 import kr.unithon.noname.api.NetworkRequest;
 import kr.unithon.noname.ui.base.BaseActivity;
+import kr.unithon.noname.ui.common.LoadingDialog;
 
 public class CropDetailActivity extends BaseActivity {
 

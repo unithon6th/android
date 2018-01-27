@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "kr.unithon.noname"
         minSdkVersion 21
@@ -23,6 +24,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -37,6 +41,12 @@ dependencies {
     //animation
     implementation 'com.airbnb.android:lottie:2.3.1'
 
+    //image loader
+    implementation 'com.github.bumptech.glide:glide:4.3.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
+
+    //font
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'

@@ -3,13 +3,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000000"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:overScrollMode="never">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <!-- 이미지가 있는 상단 요약뷰 -->
+            <kr.unithon.noname.ui.crop.detail.view.CropInfoView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- 작물 세부정보 뷰 -->
+            <kr.unithon.noname.ui.crop.detail.view.CropDescriptionView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/warm_grey" />
+
+            <!-- 작물 사진 뷰 -->
+            <kr.unithon.noname.ui.crop.detail.view.CropPhotoView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

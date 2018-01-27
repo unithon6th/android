@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="440dp" />
+
+        <!-- 배경 그라데이션-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradation_black" />
+
+        <!-- 툴바 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/icon_speaker" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/icon_heart" />
+
+        </LinearLayout>
+
+        <!-- 콘텐츠 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="68dp"
+                android:text="1월 28일(토)"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="10dp"
+                android:text="오늘은 비를\n맞았어요."
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                app:fontPath="@string/font_bold" />
+
+            <LinearLayout
+                android:id="@+id/date_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:alpha="0"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="재배일 까지 "
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D-72"
+                    android:textColor="#ffffff"
+                    android:textSize="21dp"
+                    app:fontPath="@string/font_bold" />
+
+            </LinearLayout>
+
+            <kr.unithon.noname.ui.crop.detail.view.CropProgressView
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="60dp"
+                app:setProgress="@{0.6f}" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>
