@@ -9,6 +9,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 /**
@@ -22,9 +27,10 @@ import java.util.ArrayList;
 
 public class ListAdapter_farm extends BaseAdapter {
     Context context;
-    TextView farmname_textView;
+    TextView Sort_textView;
     TextView cropname_textView;
     TextView content_textView;
+    TextView price_textView;
     ImageView farm_imageView;
     ArrayList<list_farmItem> list_itemArrayList;
     int profile_number;
@@ -56,19 +62,26 @@ public class ListAdapter_farm extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         if(convertView == null){
             convertView = LayoutInflater.from(context).inflate(R.layout.farm_item,null);
-            farmname_textView = (TextView)convertView.findViewById(R.id.Item_farmName);
-            content_textView = (TextView)convertView.findViewById(R.id.ItemComment);
-
-            farm_imageView = (ImageView)convertView.findViewById(R.drawable.cabbage);
+            Sort_textView = (TextView)convertView.findViewById(R.id.Item_sort);
+           // content_textView = (TextView)convertView.findViewById(R.id.ItemComment);
+            price_textView= (TextView)convertView.findViewById(R.id.price);
+            farm_imageView = (ImageView)convertView.findViewById(R.id.ItemImage);
             cropname_textView =(TextView)convertView.findViewById(R.id.Item_cropname);
         }
-        farmname_textView.setText(list_itemArrayList.get(position).getFarmname());
-        content_textView.setText(list_itemArrayList.get(position).getContent());
+        Sort_textView.setText(list_itemArrayList.get(position).getSort());
+        // content_textView.setText(list_itemArrayList.get(position).getContent());
         cropname_textView.setText(list_itemArrayList.get(position).getContent());
-        profile_number=list_itemArrayList.get(position).getProfile_image();
-        if(profile_number==1) {
-            farm_imageView.setImageResource(R.drawable.cabbage);
-        }
+        Glide.with(context)
+                .load(list_itemArrayList.get(position).getProfile_image())
+                .apply(new RequestOptions().centerCrop())
+                .into(farm_imageView);
+
+        price_textView.setText(
+                String.valueOf(
+                list_itemArrayList.get(position).getPrice()
+                )
+        );
+
         return convertView;
     }
 
