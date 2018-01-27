@@ -29,7 +29,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="인기있는 작물"
+                    android:text="새로 올라온 작물"
                     android:textSize="24sp" />
 
                 <HorizontalScrollView
@@ -98,6 +98,102 @@
 
                             <TextView
                                 android:id="@+id/name_crop2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="고구마"
+
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/Title3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="이달의 작물"
+                    android:textSize="24sp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/favoriteCrops"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/Crop1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingRight="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <ImageButton
+                                android:id="@+id/imgbtn_bestcrop1"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:padding="0sp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/cabbage"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/name_bestcrop1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="배추"
+
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <ImageButton
+                                android:id="@+id/imgbtn_bestcrop2"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:padding="0sp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/sweetpotato"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/name_bestcrop2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -199,102 +295,6 @@
                                 android:layout_weight="1"
                                 android:gravity="center"
                                 android:text="배추러"
-
-                                />
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
-                </HorizontalScrollView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingBottom="10dp"
-                android:paddingTop="20dp">
-
-                <TextView
-                    android:id="@+id/Title3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="이달의 작물"
-                    android:textSize="24sp" />
-
-                <HorizontalScrollView
-                    android:id="@+id/favoriteCrops"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp">
-
-                    <LinearLayout
-                        android:id="@+id/Crop1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:paddingRight="10dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp">
-
-                            <ImageButton
-                                android:id="@+id/imgbtn_bestcrop1"
-                                android:layout_width="70dp"
-                                android:layout_height="70dp"
-                                android:layout_weight="1"
-                                android:background="@android:color/transparent"
-                                android:padding="0sp"
-                                android:scaleType="centerCrop"
-                                app:srcCompat="@drawable/cabbage"
-
-                                />
-
-                            <TextView
-                                android:id="@+id/name_bestcrop1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="배추"
-
-                                />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp">
-
-                            <ImageButton
-                                android:id="@+id/imgbtn_bestcrop2"
-                                android:layout_width="70dp"
-                                android:layout_height="70dp"
-                                android:layout_weight="1"
-                                android:background="@android:color/transparent"
-                                android:padding="0sp"
-                                android:scaleType="centerCrop"
-                                app:srcCompat="@drawable/sweetpotato"
-
-                                />
-
-                            <TextView
-                                android:id="@+id/name_bestcrop2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="고구마"
 
                                 />
                         </LinearLayout>

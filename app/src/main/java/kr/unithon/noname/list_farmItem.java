@@ -8,38 +8,50 @@ import android.os.Bundle;
  // 농장 정보 들어갈 클래스
 public class list_farmItem {
 
-    /*
-*  식물 이름
-*  메인이미지 // int 로 ??
-*  농장이름
-*  농장 설명
-* */
-    private String cropname;
-    private int profile_image;
-    public String farmname;
-    private String content;
 
-    public list_farmItem(int profile_image, String cropname, String farmname, String content) {
+ //메인이미지 // int 로 일단 -> url 로 변경 ?
+
+    private int profile_image;
+    private String sort; // 종류
+    private String cropname; // 작물 이름
+  //  public String farmname; // 농장 이름
+    private String content; // ₩가격
+    private int price;
+
+    public list_farmItem(int profile_image, String cropname,int price, String content, String sort) {
         this.profile_image = profile_image;
         this.cropname = cropname;
-        this.farmname= farmname;
+        this.price = price;
+      //  this.farmname= farmname;
         this.content= content;
+        this.sort= sort;
     }
 
     public int getProfile_image() {
         return profile_image;
     }
-
+    public int getPrice(){return price;}
     public void setProfile_image(int profile_image) {
         this.profile_image = profile_image;
+    }
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+  /*  public String getFarmname() {
+        return farmname;
     }
 
     public void setFarmname(String farmname) {
         this.content = farmname;
     }
+    */
+    public String getSort() {
+        return sort;
+    }
 
-    public String getFarmname() {
-        return farmname;
+    public void setSort(String sort) {
+        this.sort = sort;
     }
 
     public String getContent() {

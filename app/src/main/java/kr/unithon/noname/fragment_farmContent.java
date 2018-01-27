@@ -1,6 +1,8 @@
 package kr.unithon.noname;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -19,13 +21,30 @@ public class fragment_farmContent extends Fragment {
     ListView FarmlistView;
     ArrayAdapter<String> adapter;
     TextView textView;
+    private Button FarmContent;
+    private Context mContext;
 
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mContext = getActivity();
+    }
+
+    @Nullable
+    @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.listview_farm_item, container, false);
-
+        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        FarmContent= (Button)rootView.findViewById(R.id.FarmContent);
+        FarmContent.setOnClickListener(this);
         return rootView;
     }
 
 
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(mContext, fragment_farmContent.class);
+        startActivity(intent);
+    }
 
 }
