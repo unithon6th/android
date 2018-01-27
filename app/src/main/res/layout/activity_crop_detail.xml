@@ -17,6 +17,7 @@
             <!-- 이미지가 있는 상단 요약뷰 -->
             <kr.unithon.noname.ui.crop.detail.view.CropInfoView
                 android:layout_width="match_parent"
+                android:id="@+id/car_info_view"
                 android:layout_height="wrap_content" />
 
             <!-- 작물 세부정보 뷰 -->

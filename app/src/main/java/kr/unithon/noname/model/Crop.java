@@ -4,7 +4,9 @@ import java.util.Date;
 
 public class Crop {
 
-    public String id;
+    public int sgid;
+    public int pgid;
+    public int purchase_amount;
     public CropStatus status;
     public String name;
     public String nickname;
@@ -12,6 +14,7 @@ public class Crop {
     public String description;
     public Date harvestDate;
     public Date startDate;
+    public String purchase_date;
     public String mainImageUrl;
 
 }
